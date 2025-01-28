@@ -1,0 +1,121 @@
+import React from 'react';
+import { Shield, CheckCircle, Smile, User, ChevronRight } from 'lucide-react';
+import photo from '../Images/group.png';
+
+const AboutPage = () => {
+  const features = [
+    {
+      icon: <Shield className="w-12 h-12 text-orange-500" />,
+      title: "Confidential & Safe",
+      description: "All your private information is safe with us",
+      bgColor: "bg-red-50",
+    },
+    {
+      icon: <CheckCircle className="w-12 h-12 text-green-500" />,
+      title: "No Hidden Fee",
+      description: "Everything is put before you with no hidden charges or conditions",
+      bgColor: "bg-green-50",
+    },
+    {
+      icon: <Smile className="w-12 h-12 text-blue-500" />,
+      title: "Guaranteed Satisfaction",
+      description: "We ensure that you stay 100% satisfied with our offered services",
+      bgColor: "bg-blue-50",
+    },
+    {
+      icon: <User className="w-12 h-12 text-red-500" />,
+      title: "Expert CA/CS Assistance",
+      description: "Prompt support from our in-house expert professionals",
+      bgColor: "bg-pink-50",
+    },
+    // {
+    //   icon: <Shield className="w-12 h-12 text-orange-500" />,
+    //   title: "Confidential & Safe",
+    //   description: "All your private information is safe with us",
+    //   bgColor: "bg-orange-50",
+    // },
+  ];
+
+  return (
+    <div className="mx-12 px-4 py-16">
+
+      {/* About Section */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24">
+        <div>
+          <p className="text-orange-400 font-medium mb-6">WELCOME TO REGISTERKARO.IN</p>
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            About <span className="text-orange-400">Register Karo</span>
+          </h2>
+          
+          <div className="space-y-6 text-black font-[16px]">
+            <p>
+              We have been using Intelegencia as our DevOps vendor for our field service 
+              applications over the last couple of years and I'm extremely pleased with 
+              their performance, ability to execute, and willingness to adapt in our ever changing 
+              environment. Perry is an outstanding leader who is fanatical about 
+              customer satisfaction. He has built a solid team which has consistently delivered 
+              on projects thereby exceeding everyone's expectations.
+            </p>
+            
+            <p>
+              I would strongly recommend their services to any organization that is looking for 
+              solid, reliable, and predictable outcomes.
+            </p>
+
+            <button className="flex items-center bg-blue-900 text-white px-6 py-3 rounded hover:bg-blue-800 transition-colors">
+              Learn More
+              <ChevronRight className="ml-2 w-5 h-5" />
+            </button>
+          </div>
+        </div>
+
+        {/* Team Image */}
+        <div className="relative">
+          <div className="rounded-lg overflow-hidden justify-self-end">
+            <img
+              src={photo}
+              alt="RegisterKaro Team"
+              className="w-[584px] h-auto rounded-lg"
+            />
+          </div>
+        </div>
+      </div>
+      {/* Why Choose Section */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className=''>
+            <p className="text-orange-400 font-medium mb-2">WHY REGISTERKARO.IN</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Why Choose Register Karo</h2>
+            <p className="mb-12 max-w-3xl mr-16">
+            It is with consistent services and results that build trust with the people and that in 
+            turn help us to serve the business better.
+            </p>
+            <div className={`hidden md:block bg-orange-50 px-2 py-8 rounded-lg text-center h-[215px] w-[288px] justify-self-end mt-24`}>
+              <div className="flex justify-center mb-4">
+                <Shield className="w-12 h-12 text-orange-500" />
+              </div>
+              <h3 className="text-xl font-bold mb-3">Confidential & Safe</h3>
+              <p className="text-gray-600">All your private information is safe with us</p>
+            </div>
+        </div>
+
+        {/* Features Grid */}
+        <div className="flex flex-wrap gap-6 justify-self-end">
+          {features.map((feature, index) => (
+            <div 
+              key={index}
+              className={`${feature.bgColor} px-2 py-8 rounded-lg text-center h-[215px] w-[288px]`}
+            >
+              <div className="flex justify-center mb-4">
+                {feature.icon}
+              </div>
+              <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
+              <p className="text-gray-600">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default AboutPage;
