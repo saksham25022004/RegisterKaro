@@ -69,7 +69,7 @@ const Navbar = () => {
               <img 
                 src={cap} 
                 alt="Christmas Hat" 
-                className="absolute -top-4 -left-5 w-[35px] h-[34px]"
+                className="absolute -top-4 -left-5 w-[40px] h-[40px]"
               />
             </div>
           </div>
