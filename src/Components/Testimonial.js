@@ -14,25 +14,25 @@ const TestimonialSlider = () => {
       rating: 4.5,
     },
     {
-      text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat amet occaecat cupidatat non proident ea commodo consequat aute irure sint amet occaecat cupidatat",
+      text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat amet occaecat cupidatat non proident ea commodo consequat aute irure sint amet occaecat",
       author: "Chris",
       position: "President and CEO, PrintReach, USA",
       rating: 4.5,
     },
     {
-      text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat amet occaecat cupidatat non proident aute irure sint amet occaecat cupidatat non occaecat cupidatat non proident",
+      text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat amet occaecat cupidatat non proident aute irure sint amet occaecat cupidatat non occaecat",
       author: "Chris",
       position: "President and CEO, PrintReach, USA",
       rating: 4.5,
     },
     {
-      text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat amet occaecat cupidatat non proident aute irure sint amet occaecat cupidatat non occaecat cupidatat non proident",
+      text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat amet occaecat cupidatat non proident aute irure sint amet occaecat cupidatat non occaecat",
       author: "Chris",
       position: "President and CEO, PrintReach, USA",
       rating: 4.5,
     },
     {
-      text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat amet occaecat cupidatat non proident aute irure sint amet occaecat cupidatat non occaecat cupidatat non proident",
+      text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat amet occaecat cupidatat non proident aute irure sint amet occaecat cupidatat non occaecat",
       author: "Chris",
       position: "President and CEO, PrintReach, USA",
       rating: 4.5,
@@ -53,10 +53,10 @@ const TestimonialSlider = () => {
 
   return (
     <div className="bg-[#1C4670] py-16 px-4">
-      <div className="ml-10">
+      <div className="sm:ml-10">
         <div className="flex justify-between items-center mb-12 mx-5">
-          <h2 className="text-3xl font-bold text-white">What peoples says about us</h2>
-          <div className="flex gap-4 mr-10">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white">What peoples says about us</h2>
+          <div className="flex gap-2 sm:gap-4 ml-3 sm:mr-10">
             <button
               onClick={prevSlide}
               className="p-4 bg-white rounded-full hover:bg-blue transition-colors"
@@ -82,9 +82,9 @@ const TestimonialSlider = () => {
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="w-[520px] h-[318px] flex-shrink-0 px-4"
+                className="w-[360px] h-[290px] sm:w-[520px] sm:h-[318px] flex-shrink-0 px-1 sm:px-4"
               >
-                <div className="bg-white rounded-lg p-8 shadow-lg">
+                <div className="bg-white rounded-lg p-4 sm:p-8 shadow-lg">
                   <div className="flex justify-between items-start mb-6">
                     <img src={uppercomma} alt='uppercomma' />
                     <div className="flex">

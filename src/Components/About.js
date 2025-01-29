@@ -28,22 +28,15 @@ const AboutPage = () => {
       description: "Prompt support from our in-house expert professionals",
       bgColor: "bg-pink-50",
     },
-    // {
-    //   icon: <Shield className="w-12 h-12 text-orange-500" />,
-    //   title: "Confidential & Safe",
-    //   description: "All your private information is safe with us",
-    //   bgColor: "bg-orange-50",
-    // },
   ];
 
   return (
-    <div className="mx-12 px-4 py-16">
+    <div className="sm:mx-12 px-4 py-8 sm:py-16 text-center sm:text-start">
 
-      {/* About Section */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24">
         <div>
           <p className="text-orange-400 font-medium mb-6">WELCOME TO REGISTERKARO.IN</p>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
             About <span className="text-orange-400">Register Karo</span>
           </h2>
           
@@ -62,14 +55,13 @@ const AboutPage = () => {
               solid, reliable, and predictable outcomes.
             </p>
 
-            <button className="flex items-center bg-blue-900 text-white px-6 py-3 rounded hover:bg-blue-800 transition-colors">
+            <button className="flex items-center ml-[25%] sm:ml-0 bg-blue-900 text-white px-6 py-3 rounded hover:bg-blue-800 transition-colors">
               Learn More
               <ChevronRight className="ml-2 w-5 h-5" />
             </button>
           </div>
         </div>
 
-        {/* Team Image */}
         <div className="relative">
           <div className="rounded-lg overflow-hidden justify-self-end">
             <img
@@ -80,16 +72,16 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
-      {/* Why Choose Section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 sm:gap-6 justify-self-center">
         <div className=''>
             <p className="text-orange-400 font-medium mb-2">WHY REGISTERKARO.IN</p>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Why Choose Register Karo</h2>
-            <p className="mb-12 max-w-3xl mr-16">
+            <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-6">Why Choose Register Karo</h2>
+            <p className="mb-12 max-w-3xl sm:mr-16">
             It is with consistent services and results that build trust with the people and that in 
             turn help us to serve the business better.
             </p>
-            <div className={`hidden md:block bg-orange-50 px-2 py-8 rounded-lg text-center h-[215px] w-[288px] justify-self-end mt-24`}>
+            <div className={`hidden lg:block bg-orange-50 px-2 py-8 rounded-lg text-center h-[215px] w-[288px] justify-self-end mt-24`}>
               <div className="flex justify-center mb-4">
                 <Shield className="w-12 h-12 text-orange-500" />
               </div>
@@ -98,12 +90,11 @@ const AboutPage = () => {
             </div>
         </div>
 
-        {/* Features Grid */}
-        <div className="flex flex-wrap gap-6 justify-self-end">
+        <div className="flex flex-wrap gap-6 items-center justify-center sm:justify-start sm:justify-self-end">
           {features.map((feature, index) => (
             <div 
               key={index}
-              className={`${feature.bgColor} px-2 py-8 rounded-lg text-center h-[215px] w-[288px]`}
+              className={`${feature.bgColor} px-2 py-8 rounded-lg text-center sm:h-[215px] sm:w-[288px]`}
             >
               <div className="flex justify-center mb-4">
                 {feature.icon}

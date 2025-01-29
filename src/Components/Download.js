@@ -5,7 +5,7 @@ const AppDownloadSection = () => {
   return (
     <div className='relative'>
       <div className="bg-[#1C4670] pt-12 pb-24 relative -z-30">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mx-5 sm:mx-0">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mx-2 m-auto sm:mx-0">
             <div className="max-w-xl justify-self-center -z-20">
                 <h2 className="text-4xl font-bold text-white mb-6">
                     Manage Your Services by your Mobile Phone
@@ -47,7 +47,7 @@ const AppDownloadSection = () => {
                     </div>
                 </div>
             </div>
-            <div className='-mt-40 justify-self-end absolute -z-10 hidden sm:block'>
+            <div className='-mt-40 justify-self-end absolute -z-10 hidden lg:block'>
                 <img src={mobile} alt='mobile' />
             </div>
         </div>

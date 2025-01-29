@@ -1,4 +1,6 @@
 import React, { Suspense } from 'react';
+import Navbar from './Components/Navbar';
+import LandingPage from './Components/LandingPage';
 
 const AboutPage = React.lazy(() => import('./Components/About'));
 const BlogLayout = React.lazy(() => import('./Components/Blog'));
@@ -11,16 +13,14 @@ const ExploreServices = React.lazy(() => import('./Components/ExploreServices'))
 const FAQSection = React.lazy(() => import('./Components/FAQ'));
 const Footer = React.lazy(() => import('./Components/Footer'));
 const IntroVideo = React.lazy(() => import('./Components/IntroVideo'));
-const LandingPage = React.lazy(() => import('./Components/LandingPage'));
-const Navbar = React.lazy(() => import('./Components/Navbar'));
 const TestimonialSlider = React.lazy(() => import('./Components/Testimonial'));
 
 function App() {
   return (
     <div className="App">
-      <Suspense fallback={<div>Loading...</div>}>
-        <Navbar />
-        <LandingPage />
+      <Navbar />
+      <LandingPage />
+      <Suspense>
         <ExploreServices />
         <AboutPage />
         <IntroVideo />

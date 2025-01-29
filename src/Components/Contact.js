@@ -6,8 +6,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Email submitted:', email);
+    alert('Email submitted:', email);
   };
 
   const features = [
@@ -28,7 +27,7 @@ const Contact = () => {
         </h1>
 
         <form onSubmit={handleSubmit} className="max-w-xl mx-auto mb-8">
-          <div className="flex flex-col sm:flex-row">
+          <div className="flex flex-row">
             <input
               type="email"
               placeholder="Enter Your Email"

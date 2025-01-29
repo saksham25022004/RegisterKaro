@@ -2,7 +2,7 @@ import React from 'react';
 import band from '../Images/Image.png';
 
 const BlogCard = ({ author, date, title, description, tags, image }) => (
-  <div className="flex flex-col h-[444px] w-[384px]">
+  <div className="flex flex-col sm:h-[444px] sm:w-[384px] mb-4 sm:mb-0 mx-auto">
     <div className="relative h-48 mb-4">
       <img src={image} alt={title} className="w-full h-full object-cover" />
     </div>
@@ -124,7 +124,7 @@ const BlogLayout = () => {
         ))}
       </div>
       
-      <div className="text-center mt-4">
+      <div className="text-center mt-8 sm:mt-4">
         <button className="px-6 py-3 bg-blue-900 text-white rounded-lg flex items-center gap-2 mx-auto hover:bg-blue-800 transition-colors">
           Show more blogs
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

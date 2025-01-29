@@ -7,17 +7,15 @@ const IntroVideo = () => {
     <div className="bg-[#1C4670] p-8">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          {/* Left Content */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <h1 className="text-4xl font-bold text-white">Our Video Introductions</h1>
+              <h1 className="text-3xl sm:text-4xl font-bold text-white">Our Video Introductions</h1>
               <p className="text-blue-200">
                 Velit purus egestas tellus phasellus. Mattis eget sed faucibus magna vulputate pellentesque a diam tincidunt apis dui.
               </p>
             </div>
 
             <div className="space-y-6">
-              {/* First Feature */}
               <div className="flex items-start gap-4">
                 <div className="bg-orange-400 rounded-full p-3">
                   <LightbulbIcon className="w-6 h-6 text-white" />
@@ -32,7 +30,6 @@ const IntroVideo = () => {
                 </div>
               </div>
 
-              {/* Second Feature */}
               <div className="flex items-start gap-4">
                 <div className="bg-orange-400 rounded-full p-3">
                   <MessageSquareIcon className="w-6 h-6 text-white" />
@@ -49,7 +46,6 @@ const IntroVideo = () => {
             </div>
           </div>
 
-          {/* Right Content - Video Section */}
           <div className="relative aspect-video bg-gray-800 rounded-lg overflow-hidden">
             <img 
               src={intro} 

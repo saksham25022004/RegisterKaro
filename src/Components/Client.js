@@ -83,8 +83,7 @@ const HappyClients = () => {
         </p>
       </div>
 
-      {/* Floating Logos Section */}
-      <div className="relative h-[300px] my-16">
+      <div className="relative h-[300px] sm:my-16 right-8 sm:right-0">
         {logos.map((position, index) => (
           <div
             key={index}
@@ -96,18 +95,17 @@ const HappyClients = () => {
               animationDelay: position.delay,
             }}
           >
-            <div className="w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center">
+            <div className="w-16 h-16 sm:w-24 sm:h-24 bg-white rounded-full shadow-lg flex items-center justify-center">
               <img
                 src={logo}
                 alt={`Client logo ${index + 1}`}
-                className="w-8 h-8 object-contain"
+                className="w-8 h-8 sm:w-16 sm:h-16 object-contain"
               />
             </div>
           </div>
         ))}
       </div>
 
-      {/* Show More Button */}
       <div className="text-center mb-16">
         <button className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors">
           Show more
@@ -115,10 +113,8 @@ const HappyClients = () => {
         </button>
       </div>
 
-      {/* Process Steps */}
       <ProcessSteps />
 
-      {/* Animation Styles */}
       <style>{floatAnimation}</style>
     </div>
   );

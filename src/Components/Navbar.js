@@ -1,14 +1,18 @@
-import React from 'react';
-import { Search, ChevronDown, Phone, Mail} from 'lucide-react';
+import React, { useState } from 'react';
+import { Search, ChevronDown, Phone, Mail, Menu} from 'lucide-react';
 import main from '../Images/main.png';
 import cap from '../Images/cap.png';
 
 const Navbar = () => {
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
   return (
     <div className="w-full border-b-2">
-      {/* Top bar */}
       <div className="w-full bg-[#1C4670] text-white py-2 mx-auto">
-        <div className="mx-auto sm:mx-20 px-4 flex justify-end items-center text-sm ">
+        <div className="sm:mx-20 sm:px-4 flex justify-end items-center text-sm ">
           
           <div className="flex items-center space-x-2 sm:space-x-8">
             <div className="flex items-center">
@@ -53,7 +57,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Main navigation */}
       <div className="mx-5 sm:mx-24 px-4 py-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
@@ -71,7 +74,7 @@ const Navbar = () => {
             </div>
           </div>
 
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden lg:flex items-center space-x-6">
             <a href="#" className="font-medium hover:text-orange-400">Home</a>
             <div className="relative group">
               <button className="flex items-center font-medium hover:text-orange-400">
@@ -89,8 +92,46 @@ const Navbar = () => {
               Talk An Expert
             </button>
           </div>
+
+          <div className="lg:hidden flex items-center">
+            <button onClick={toggleMenu} className="text-gray-600 hover:text-orange-400">
+              <Menu className="w-6 h-6" />
+            </button>
+          </div>
         </div>
       </div>
+      {isMenuOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center">
+          <div className="bg-white p-6 rounded-lg shadow-lg w-3/4">
+            <div className="space-y-4">
+              <a href="#" className="block font-medium hover:text-orange-400">Home</a>
+              <a href="#" className="block font-medium hover:text-orange-400">Our Services</a>
+              <a href="#" className="block font-medium hover:text-orange-400">Blog</a>
+              <a href="#" className="block font-medium hover:text-orange-400">Contact Us</a>
+              <a href="#" className="block font-medium hover:text-orange-400">About Us</a>
+              <div>
+                <button className="block font-medium hover:text-orange-400">
+                  Search
+                </button>
+              </div>
+              <button className="bg-orange-400 text-white px-4 py-2 rounded-md hover:bg-orange-500 transition-colors">
+                Talk An Expert
+              </button>
+            </div>
+
+            <div className="space-x-4 mt-4">
+              
+              
+            </div>
+
+            <div className="mt-4 flex justify-end">
+              <button onClick={toggleMenu} className="text-gray-600 hover:text-orange-400">
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
