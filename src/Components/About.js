@@ -1,6 +1,8 @@
 import React from 'react';
 import { Shield, CheckCircle, Smile, User, ChevronRight } from 'lucide-react';
 import photo from '../Images/group.png';
+import vector from '../Images/Vector.png';
+import dots from '../Images/dots.png';
 
 const AboutPage = () => {
   const features = [
@@ -31,10 +33,10 @@ const AboutPage = () => {
   ];
 
   return (
-    <div className="sm:mx-12 px-4 py-8 sm:py-16 text-center sm:text-start">
+    <div className="sm:ml-12 pl-4 py-8 sm:py-16 text-center sm:text-start">
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24">
-        <div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className='xl:-mt-28'>
           <p className="text-orange-400 font-medium mb-6">WELCOME TO REGISTERKARO.IN</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
             About <span className="text-orange-400">Register Karo</span>
@@ -62,13 +64,20 @@ const AboutPage = () => {
           </div>
         </div>
 
-        <div className="relative">
-          <div className="rounded-lg overflow-hidden justify-self-end">
+        <div className="relative flex justify-self-end">
+          <div className="rounded-lg overflow-hidden justify-self-center">
             <img
               src={photo}
               alt="RegisterKaro Team"
               className="w-[584px] h-auto rounded-lg"
             />
+            
+          </div>
+          <div className='absolute bottom-16 right-0 -z-10'>
+            <img src={dots} alt='vector' />
+          </div>
+          <div className='ml-5 -mt-12'>
+            <img src={vector} alt='vector' />
           </div>
         </div>
       </div>

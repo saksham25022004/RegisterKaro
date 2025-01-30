@@ -2,7 +2,7 @@ import React from 'react';
 import band from '../Images/Image.png';
 
 const BlogCard = ({ author, date, title, description, tags, image }) => (
-  <div className="flex flex-col sm:h-[444px] sm:w-[384px] mb-4 sm:mb-0 mx-auto">
+  <div className="flex flex-col lg:h-[444px] lg:w-[384px] mb-4 sm:mb-0 mx-auto">
     <div className="relative h-48 mb-4">
       <img src={image} alt={title} className="w-full h-full object-cover" />
     </div>
@@ -118,7 +118,7 @@ const BlogLayout = () => {
         <h2 className="text-3xl font-bold mt-2">Accelerate Digital Transformation</h2>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 ">
         {blogs.map((blog, index) => (
           <BlogCard key={index} {...blog} />
         ))}

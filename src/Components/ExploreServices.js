@@ -46,11 +46,11 @@ const ExploreServices = () => {
         {services.map((service, index) => (
           <div 
             key={index} 
-            className={`p-6 sm:p-12 rounded-lg transition-shadow relative group flex flex-col items-center justify-center border-b last:border-b-0 sm:border-b-0  ${
-                (index + 1) % 3 === 0 ? '' : 'sm:border-r'
+            className={`p-6 sm:p-12 rounded-lg transition-shadow relative group flex flex-col items-center justify-center border-b last:border-b-0 lg:border-b-0  ${
+                (index + 1) % 3 === 0 ? '' : 'lg:border-r'
               }`}
           >
-            <div className={`absolute ${(index + 1) % 3 === 2 ? 'bottom-10' : 'top-10'} -right-0.5 w-1 h-8  ${(index + 1) % 3 === 0 ? '' : 'bg-[#BB162B]'} transition-opacity last:bg-transparent hidden sm:block`} />
+            <div className={`absolute ${(index + 1) % 3 === 2 ? 'bottom-10' : 'top-10'} -right-0.5 w-1 h-8  ${(index + 1) % 3 === 0 ? '' : 'bg-[#BB162B]'} transition-opacity last:bg-transparent hidden lg:block`} />
             
             <div className="mb-6">
               {service.icon}
