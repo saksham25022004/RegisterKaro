@@ -1,4 +1,4 @@
-## RegisterKaro - Landing Page
+### RegisterKaro - Landing Page
 
 ## 🚀 Project Overview
 
@@ -31,19 +31,6 @@ Fast Performance: Lightweight and optimized for quick load times.
 Reusable Components: Built using React components for easy maintenance.
 
 Interactive Elements: Dynamic interactions using JavaScript and React.
-
-## 📂 Project Structure
-
-### registerkaro-landing/
-### ├── public/         # Static assets
-### ├── src/            # Main source code
-### │   ├── components/ # Reusable React components
-### │   ├── images/     # Images Used
-### │   ├── App.js      # Main application component
-### │   ├── index.js    # Entry point
-### ├── .gitignore
-### ├── package.json    # Dependencies and scripts
-### ├── README.md       # Project documentation
 
 ## 🚀 Installation & Setup
 
