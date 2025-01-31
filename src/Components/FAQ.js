@@ -44,7 +44,7 @@ const FAQSection = () => {
       <div className="space-y-4 mx-auto sm:mx-10">
         {visibleFaqs.map((faq, index) => (
           <div className='flex w-full relative'>
-            <div className="absolute w-[10px] h-[57px] bg-gradient-to-t from-[#1C4670] to-[#FFA229] rounded-md -left-[4px] opacity-[80%]"></div>
+            <div className="absolute w-[10px] h-[82px] sm:h-[57px] bg-gradient-to-t from-[#1C4670] to-[#FFA229] rounded-md -left-[4px] opacity-[80%]"></div>
             <div
               key={index}
               className="border rounded-lg rounded-l-none overflow-hidden shadow-sm bg-white w-full z-10"
