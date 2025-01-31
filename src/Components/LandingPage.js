@@ -35,8 +35,8 @@ const LandingPage = () => {
   ];
 
   return (
-    <div className="relative" style={{ backgroundImage: `radial-gradient(ellipse farthest-corner at top left, rgba(255, 255, 255, 1), rgba(255, 240, 220, 0.67), rgba(237, 246, 255, 0.7)), url(${bgImage})` }}>
-      <div className="sm:mx-auto">
+    <div className="relative bg-[linear-gradient(140.91deg,#FFFFFF_8%,rgba(255,240,220,0.67)_28%,rgba(237,246,255,0.7)_36%)]" >
+      <div className="sm:mx-auto" style={{ backgroundImage: `url(${bgImage})` }}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="space-y-8 ml-5 sm:ml-20 mt-4 sm:mt-12">
             <div className="flex items-center gap-2">

@@ -43,26 +43,29 @@ const FAQSection = () => {
 
       <div className="space-y-4 mx-auto sm:mx-10">
         {visibleFaqs.map((faq, index) => (
-          <div
-            key={index}
-            className="border rounded-lg overflow-hidden shadow-sm bg-white"
-          >
-            <button
-              className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50"
-              onClick={() => toggleQuestion(index)}
+          <div className='flex w-full relative'>
+            <div className="absolute w-[10px] h-[57px] bg-gradient-to-t from-[#1C4670] to-[#FFA229] rounded-md -left-[4px] opacity-[80%]"></div>
+            <div
+              key={index}
+              className="border rounded-lg rounded-l-none overflow-hidden shadow-sm bg-white w-full z-10"
             >
-              <span className="font-medium text-gray-900">{faq.question}</span>
-              <ChevronRight
-                className={`w-5 h-5 text-gray-500 transition-transform ${
-                  expandedIndex === index ? 'transform rotate-90' : ''
-                }`}
-              />
-            </button>
-            {expandedIndex === index && (
-              <div className="px-6 py-4 bg-white border-t">
-                <p className="text-gray-600">{faq.answer}</p>
-              </div>
-            )}
+              <button
+                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50"
+                onClick={() => toggleQuestion(index)}
+              >
+                <span className="font-medium text-gray-900">{faq.question}</span>
+                <ChevronRight
+                  className={`w-5 h-5 text-gray-500 transition-transform ${
+                    expandedIndex === index ? 'transform rotate-90' : ''
+                  }`}
+                />
+              </button>
+              {expandedIndex === index && (
+                <div className="px-6 py-4 bg-white border-t">
+                  <p className="text-gray-600">{faq.answer}</p>
+                </div>
+              )}
+            </div>
           </div>
         ))}
       </div>
